@@ -1,7 +1,5 @@
 // INPUT CONSTANTS
 const form = document.getElementById('form');
-const submit = document.getElementById('btn');
-
 
 // CARD CONSTANTS
 const card = document.getElementById('card');
@@ -29,11 +27,13 @@ form.addEventListener('submit', (e) => {
     fetch(url)
       .then(res => res.json())
       .then(data => {
+        card.classList.toggle(data.types[0].type.name),
         image.setAttribute('src', data.sprites.back_default),
         pkmName.innerText = data.name,
         num.innerHTML = data.order,
         type.innerText = data.types[0].type.name
       });
+
   } catch (err) {
     console.log(err);
   }

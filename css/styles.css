@@ -12,8 +12,30 @@
 
 /* ROOT VARIABLES */
 :root {
+  --fire : #fa7f7f; 
+  --wind : #b7b2b2;
+  --grass : #8cfd7e;
 
 }
+
+
+/* BORDER CLASSES */
+.basic {
+  background-color: #ffecd6;
+}
+
+.fire {
+  background-color: var(--fire);
+}
+
+.wind {
+  background-color: var(--wind);
+}
+
+.grass {
+  background-color: var(--grass);
+}
+/* BORDER CLASSES 
 
 
 
@@ -103,6 +125,10 @@ h1 {
 .fa-brands {
   width: 100%;
 }
+/* NAV STYLES */
+
+
+
 
 
 /* MAIN STYLES */
@@ -112,6 +138,9 @@ main {
   align-items: center;
   padding: 1rem;
 }
+/* MAIN STYLES */
+
+
 
 
 
@@ -149,6 +178,8 @@ main {
   background-color: transparent;
   color: #000;
 }
+/* INPUT STYLES */
+
 
 
 
@@ -156,10 +187,9 @@ main {
 .card__container {
   width: 300px;
   height: 400px;
-  padding: 1.1rem;
+  padding: 1rem;
   font-size: 17px;
   text-align: center;
-  background-color: #ffecd6;
   border-radius: 10px;
   border: 2px solid #1079ea;
   box-shadow: 0px 7px 7px 2px rgba(0,0,0,0.71);
@@ -168,15 +198,16 @@ main {
 .pokeimage {
   width: 100px;
   margin: 1.4rem 0 1.4rem 0;
-  padding: .7rem;
   background-color: #fff;
   border-radius: 50%;
 }
 
 .pkm__name {
   margin: 1.4rem 0 1.4rem 0;
+  font-size: 28px;
+  text-transform: capitalize;
 }
-
+/* CARD STYLES */
 
 
 
