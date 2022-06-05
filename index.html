@@ -24,7 +24,7 @@
         <h1>PokeSearch</h1>
 
         <button class="btn__github">
-            <a href="#" class="link">
+            <a href="https://github.com/laindomJS/pokeapi-app" class="link">
                 <i class="fa-brands fa-github"></i>
             </a>
         </button>
@@ -35,9 +35,22 @@
     <!-- MAIN CONTENT -->
     <main>
 
+        <form class="form" id="form">
+            <input type="text" name="pokemon" id="pkm" class="search__bar" placeholder="Search you Pokemon">
+            <button type="submit" class="submit" id="btn">Search</button>
+        </form>
+
         <!-- CARD -->
-        <article class="card__container">
+        <article class="card__container" id="card">
             
+            <img src="./assets/question.svg" alt="pokemon image" class="pokeimage" id="img">
+            
+            <div class="pokemon__info">
+                <h2 class="pkm__name" id="name">????</h2>
+                <span class="pkm__num" id="num">???</span>
+                <span class="pkm__type" id="type">???</span>
+            </div>
+
         </article>
         <!-- CARD END -->
 
