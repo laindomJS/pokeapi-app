@@ -7,10 +7,11 @@ const pkmName = document.getElementById('name');
 const num = document.getElementById('num');
 const pkmType = document.getElementById('type');
 const pkmStats = document.getElementById('stats');
+const card = document.getElementById('card');
 
 // COLORS
 const typeColors = {
-  electric: '#FFEA70',
+  electric: '#f4d839',
   normal: '#B09398',
   fire: '#FF675C',
   water: '#0596C7',
@@ -28,6 +29,8 @@ const typeColors = {
   fighting: '#2F2F2F',
   default: '#2A1A1F',
 };
+
+
 
 // FETCH
 form.addEventListener('submit', e => {
@@ -47,6 +50,20 @@ form.addEventListener('submit', e => {
       .catch(err => notFound());
 })
 
+
+
+// FUNCTION TO CREATE THE CARD
+const createCard = () => {
+  if(!card.classList.contains('visible')) {
+    card.classList.remove('invisible');
+    card.classList.add('visible');
+  } else {
+    card.classList.add('visible');
+  }
+}
+
+
+// FUNCTION TO RENDER THE BASIC POKEMON INFO
 const renderPokemon = (data) => {
   
   const sprite = data.sprites.front_default;
@@ -56,10 +73,13 @@ const renderPokemon = (data) => {
   image.setAttribute('src', sprite);
   num.innerText = `Nº ${data.id}`;
 
+  createCard();
   includeTypes(types)
   includeStats(stats);
 }
 
+
+// FUNCTION TO INCLUDE THE TYPE OF THE POKEMON
 const includeTypes = (types) => {
   
   pkmType.innerHTML = '';
@@ -67,12 +87,13 @@ const includeTypes = (types) => {
   types.forEach(type => {
     const typeText = document.createElement("div");
     typeText.textContent = type.type.name;
+    typeText.style.color = typeColors[type.type.name];
     pkmType.appendChild(typeText);
   });
 
 }
 
-
+// FUNCTION TO MANAGE THE STATS OF THE POKEMON
 const includeStats = (stats) => {
   pkmStats.innerHTML = '';
 
@@ -91,7 +112,9 @@ const includeStats = (stats) => {
 
 }
 
+// ERROR FUNCTION
 const notFound = () => {
+  createCard();
   pkmName.textContent = 'The specified Pokemon not exists';
   num.innerHTML = '';
   pkmType.innerHTML = ''; 

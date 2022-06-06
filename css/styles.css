@@ -9,40 +9,11 @@
 
 
 
-
-/* ROOT VARIABLES */
-:root {
-  --fire : #fa7f7f; 
-  --wind : #b7b2b2;
-  --grass : #8cfd7e;
-
-}
-
-
-/* BORDER CLASSES */
-.basic {
-  background-color: #ffecd6;
-}
-
-.fire {
-  background-color: var(--fire);
-}
-
-.wind {
-  background-color: var(--wind);
-}
-
-.grass {
-  background-color: var(--grass);
-}
-/* BORDER CLASSES 
-
-
-
 /* BODY STYLES */
 body {
   font-family: 'Nunito', sans-serif;
   font-size: 18px;
+  background-color: #ffffff;
 }
 
 
@@ -168,6 +139,7 @@ main {
   outline: none;
   border: none;
   font-weight: 700;
+  font-size: 15px;
   background-color: #1079ea;
   color: #fff;
   transition: .2s ease-in-out;
@@ -184,16 +156,6 @@ main {
 
 
 /* CARD STYLES */
-.image__container {
-  background-color: #fa7f7f;
-  border-radius: 50%;
-  width: fit-content;
-}
-
-.image {
-  width: 90px;
-}
-
 .pokeCard {
   padding: .8rem;
   height: fit-content;
@@ -205,6 +167,22 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.image__container {
+  width: fit-content;
+}
+
+.image {
+  width: 90px;
 }
 
 .pkm__name {
@@ -225,13 +203,15 @@ main {
 }
 
 .pkm__types {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
-
-
 /* CARD STYLES */
 
 
 
+/* MEDIA QURIES */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    
+}
