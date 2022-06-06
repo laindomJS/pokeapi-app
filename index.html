@@ -9,7 +9,6 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- SCRIPTS JS -->
-    <script defer src="./js/main.js"></script>
     <script defer src="./js/button.js"></script>
     <!-- FONT AWESOME CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,20 +35,24 @@
     <main>
 
         <form class="form" id="form">
-            <input type="text" name="pokemon" id="pkm" class="search__bar" placeholder="Search you Pokemon">
+            <input type="text" autocomplete="off" name="pokemon" id="pkm" class="search__bar" placeholder="Search you Pokemon">
             <button type="submit" class="submit" id="btn">Search</button>
         </form>
 
         <!-- CARD -->
-        <article class="card__container basic" id="card">
+        <article class="pokeCard" id="card">
             
-            <img src="./assets/question.svg" alt="pokemon image" class="pokeimage" id="img">
-            
-            <div class="pokemon__info">
-                <h2 class="pkm__name" id="name">????</h2>
-                <span class="pkm__num" id="num">???</span>
-                <span class="pkm__type" id="type">???</span>
+            <div class="image__container">
+                <img src="./assets/question.svg" class="image" id="img" alt="pokemon image">
             </div>
+
+            <div class="pkm__name" id="name"></div>
+           
+            <span class="pkm__num" id="num"></span>
+
+            <div class="pkm__types" id="type"></div>
+
+            <div class="pkm__stats" id="stats"></div>
 
         </article>
         <!-- CARD END -->
@@ -58,6 +61,6 @@
     <!-- MAIN CONTENT END -->
 
 
-
+    <script src="./js/main.js"></script>
 </body>
 </html>
